@@ -5,7 +5,7 @@ from pathlib import Path
 root_path = Path(__file__).parent.parent
 data_path = root_path / "data" / "raw" / "swiggy.csv"
 # prediction endpoint
-predict_url = "http://127.0.0.1:8000/predict"
+predict_url = "http://0.0.0.0:8000/predict"
 # sample row for testing
 sample_row = pd.read_csv(data_path).dropna().sample(1)
 print("The target value is", sample_row.iloc[:,-1].values.item().replace("(min) ",""))
